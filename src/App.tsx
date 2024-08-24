@@ -3,7 +3,7 @@ import Body from './components/Body'
 
 const App:React.FC = () => {
   return (
-    <div>
+    <div className='bg-teal-700 flex flex-col items-center justify-center h-screen'>   
       <Body/>
     </div>
   )
