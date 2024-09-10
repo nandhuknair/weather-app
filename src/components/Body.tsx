@@ -1,14 +1,19 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import WeatherCard from "./WeatherCard";
 
 const Body: React.FC = () => {
   const [weather, setWeather] = useState<any>(null);
   const [error, setError] = useState<string>("");
-  console.log(error + "This is error");
-  console.log(weather + "This is the weather");
+  const [sevenDaysForcast, setSevenDaysForcast] = useState<any>(null);
+  console.log(sevenDaysForcast+' '+'This is teh seven day forcaset');
   return (
     <div className="">
-      <Input setWeather={setWeather} setError={setError} />
+      <Input
+        setWeather={setWeather}
+        setError={setError}
+        setSevenDaysForcast={setSevenDaysForcast}
+      />
 
       {error && (
         <div>
@@ -36,6 +41,17 @@ const Body: React.FC = () => {
           <p className="text-lg">Humidity: {weather.main.humidity}%</p>
           <p className="text-lg">Wind Speed: {weather.wind.speed} m/s</p>
         </div>
+      )}
+
+      {sevenDaysForcast && (
+      <div className="flex justify-between mt-4">
+        {sevenDaysForcast.map((data:any)=> {
+          return(
+              <h1>Hello</h1>
+          )
+        })}
+        
+      </div>
       )}
     </div>
   );

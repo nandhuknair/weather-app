@@ -1,31 +1,40 @@
 import React, { useState } from "react";
-import { fetchWeather } from "../api/weatherApi";
+import { fetchSevenDayForecast, fetchWeather } from "../api/weatherApi";
 
 interface InputProps {
-    setWeather:(weather:any)=> void
-    setError:(error:string)=> void
+  setWeather: (weather: any) => void;
+  setError: (error: string) => void;
+  setSevenDaysForcast: (sevenDaysForcast :any)=> void
 }
 
-const Input: React.FC <InputProps> = ({setWeather,setError}) => {
+const Input: React.FC<InputProps> = ({ setWeather, setError ,setSevenDaysForcast }) => {
   const [city, setCity] = useState<string>("");
-  const handleSearch = () => {
+
+  const handleSearch = async () => {
     console.log(city);
-    fetchWeather(city)
-    .then(res=> {
-      if(res?.data?.cod === 404){
-        setWeather(null)
-        setError(res?.data?.message)
+    const res = await fetchWeather(city);
+
+    try {
+      if (res?.data?.cod === 404) {
+        setWeather(null);
+        setError(res?.data?.message);
+      } else if (res?.data?.cod === 200) {
+        setError("");
+        setWeather(res.data);
+        try {
+          const sevenDays = await fetchSevenDayForecast(res.data.coord)
+          console.log(sevenDays.data.list.slice(1,7))
+          setSevenDaysForcast(sevenDays.data.list.slice(1,7))
+        } catch (error) {
+          console.log(error)
+        }
       }
-      else if(res?.data?.cod === 200){
-        setError('')
-        setWeather(res.data)
-      }
-    })
-    .catch(error=> {
-      console.log(error)
-      setWeather(null)
-      setError("Failed to fetch weather data")
-    })
+    } catch (error) {
+      console.log(error);
+      setWeather(null);
+      setError("Failed to fetch weather data");
+    }
+
   };
 
   return (
