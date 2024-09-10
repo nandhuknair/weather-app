@@ -5,7 +5,11 @@ module.exports = {
     "./public/index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'light-blue': '#dbeafe', // Define your custom color
+      },
+    },
   },
   plugins: [],
 };

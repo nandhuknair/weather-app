@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { fetchSevenDayForecast, fetchWeather } from "../api/weatherApi";
+import { Feather } from "lucide-react";
 
 interface InputProps {
   setWeather: (weather: any) => void;
@@ -38,13 +39,14 @@ const Input: React.FC<InputProps> = ({ setWeather, setError ,setSevenDaysForcast
   };
 
   return (
-    <div>
+    <div className="flex">
       <input
         type="text"
         placeholder="This is a text"
         onChange={(e) => setCity(e.target.value)}
+        className="bg-[#2f2a6183] border border-slate-300 w-full p-3 rounded-md text-light-blue"
       />
-      <button onClick={handleSearch} className="bg-teal-100 ml-6 p-2">
+      <button onClick={handleSearch} className="bg-light-blue rounded-md ml-6 px-10 text-[#2f2a61] hover:bg-[#2f2a60] hover:text-light-blue">
         Search
       </button>
     </div>
