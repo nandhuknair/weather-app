@@ -64,7 +64,7 @@ https://github.com/user-attachments/assets/9a42d404-f8fc-4b1d-ad8e-2fab2a0eaeb8
 
 ## 📸 Screenshots
 
-![Forecast View](https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png)
+![Forecast View](https://github.com/user-attachments/assets/5037b323-7b11-4308-8e13-f2c6324f69c2)
 
 ## 🤝 Contributing
 
