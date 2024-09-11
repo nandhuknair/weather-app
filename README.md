@@ -6,8 +6,8 @@ WeatherNow is a sleek and user-friendly weather application that provides real-t
 
 ## 🎥 App Demo
 
-![WeatherNow App Demo]([https://youtu.be/56SFXqxWPak](https://github.com/user-attachments/assets/9a42d404-f8fc-4b1d-ad8e-2fab2a0eaeb8
-))
+https://youtu.be/56SFXqxWPak](https://github.com/user-attachments/assets/9a42d404-f8fc-4b1d-ad8e-2fab2a0eaeb8
+
 
 ## ✨ Features
 
