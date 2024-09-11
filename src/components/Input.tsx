@@ -64,7 +64,7 @@ export default function Component({ setWeather, setError, setSevenDaysForcast }:
     } catch (error) {
       console.log(error);
       setWeather(null);
-      setError("Failed to fetch weather data");
+      setError("Failed to fetch the weather data");
     }
   };
 
