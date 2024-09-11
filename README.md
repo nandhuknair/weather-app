@@ -1,7 +1,6 @@
 
 # ☀️🌦️ WeatherNow App
 
-![WeatherNow Logo](https://placeholder.com/wp-content/uploads/2018/10/placeholder.com-logo1.png)
 
 WeatherNow is a sleek and user-friendly weather application that provides real-time weather information and forecasts for locations worldwide. Built with React and powered by open weather map api, it offers a seamless experience for users to stay updated with current weather conditions and plan ahead with accurate forecasts.
 
