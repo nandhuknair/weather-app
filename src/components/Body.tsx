@@ -8,16 +8,6 @@ const Body: React.FC = () => {
   const [error, setError] = useState<string>("");
   const [sevenDaysForcast, setSevenDaysForcast] = useState<any>(null);
 
-  const getDayName = (dateString: string) => {
-    try {
-      const date = parseISO(dateString);
-      return format(date, "EEEE");
-    } catch (error) {
-      console.error("Date parsing error:", error);
-      return "";
-    }
-  };
-
   return (
     <div className="bg-[#0f0c29b0] flex flex-col p-10 rounded-lg pt-6">
       <div className="text-light-blue font-semibold text-3xl mb-8 flex justify-center items-center">
@@ -81,11 +71,10 @@ const Body: React.FC = () => {
                 key={index}
                 className="bg-white/10 border border-blue-500 border-opacity-30 rounded-lg p-4 text-center justify-center">
 
-
                 <img src={iconUrl} alt="" className="mx-auto h-12 w-12" />
 
                 <p className="text-lg font-bold mt-2 text-blue-100">
-                  {temperature}
+                  {temperature} °C
                 </p>
                 <p className="text-lg font-bold mt-2 text-[#93c5fd]">
                   {weather}
@@ -95,6 +84,7 @@ const Body: React.FC = () => {
           })}
         </div>
       )}
+
     </div>
   );
 };
