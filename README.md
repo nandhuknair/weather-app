@@ -1,8 +1,8 @@
 
-# ☀️🌦️ WeatherNow App
+# ☀️🌦️ Cosmic weather App
 
 
-WeatherNow is a sleek and user-friendly weather application that provides real-time weather information and forecasts for locations worldwide. Built with React and powered by open weather map api, it offers a seamless experience for users to stay updated with current weather conditions and plan ahead with accurate forecasts.
+Cosmic weather app is a sleek and user-friendly weather application that provides real-time weather information and forecasts for locations worldwide. Built with React and powered by open weather map api, it offers a seamless experience for users to stay updated with current weather conditions and plan ahead with accurate forecasts.
 
 ## 🎥 App Demo
 
